@@ -1,3 +1,5 @@
+import Footer from "./components/Footer"
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
         </ul>
       </div>
     </div>
+    <Footer />
     </>
   )
 }
