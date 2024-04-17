@@ -1,11 +1,11 @@
 import Footer from "@/components/footer";
-import { ModeToggle } from "@/components/mode-toggle";
+import Navbar from "@/components/navbar";
 import { Outlet } from "react-router-dom";
 
 function Root() {
   return (
     <>
-      <ModeToggle />
+      <Navbar />
       <Outlet />
       <Footer />
     </>
