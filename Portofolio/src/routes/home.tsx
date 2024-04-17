@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div className='container'>
+    <div className="px-5">
       <h1>Rahmah Putri Azzahra</h1>
       <h2>Hacktiv8 FSJS Graduate</h2>
 
