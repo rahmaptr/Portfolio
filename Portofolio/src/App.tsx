@@ -2,8 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider"
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
+import Home from "./routes/home";
 
-const BrowserRouter = createBrowserRouter([{ path: "/", element: <Root />, errorElement: <ErrorPage />}])
+const BrowserRouter = createBrowserRouter([{ element: <Root />, errorElement: <ErrorPage />, children: [{ path: "/", element: <Home/> }] }])
 
 function App() {
   return (

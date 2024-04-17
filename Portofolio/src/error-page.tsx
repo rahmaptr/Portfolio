@@ -1,5 +1,5 @@
 import { ErrorResponse, useRouteError } from "react-router-dom";
-import Footer from "./components/Footer";
+import Footer from "./components/footer";
 import { ModeToggle } from "./components/mode-toggle";
 
 function ErrorPage() {
