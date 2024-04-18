@@ -1,20 +1,22 @@
 import Arrow from "@/components/arrow";
+import Profile from "@/assets/profile.jpg";
 
 function Home() {
   return (
     <div className="px-5 relative">
-      <div className="h-screen flex flex-col justify-center">
+      <svg className="absolute w-full h-full -z-10 flex -right-[22em] transform scale-120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="clipPath">
+          <path fill="#FF0066" d="M46.6,-35.7C60.3,-19.9,71.4,-0.6,66.9,13.7C62.4,27.9,42.3,37.1,23.7,44C5.2,50.9,-11.9,55.6,-31.1,51.4C-50.3,47.2,-71.7,34.2,-73.3,19C-74.9,3.9,-56.8,-13.5,-41.3,-29.7C-25.8,-45.9,-12.9,-60.9,1.8,-62.3C16.4,-63.7,32.9,-51.5,46.6,-35.7Z" transform="translate(100 100)" />
+          </clipPath>
+        </defs>
+        <image href={Profile} x="20" y="10" height="150" width="150" clipPath="url(#clipPath)"/> //FIXME: change temporary image
+      </svg>
+
+      <div className="h-screen flex flex-col justify-center z-50">
         <h1>Rahmah Putri Azzahra</h1>
         <h4>Hacktiv8 FSJS Graduate</h4>
       </div>
-
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="#FF0066"
-          d="M60.9,-40.6C72.6,-33.8,71.5,-8.9,61.4,5.4C51.3,19.6,32.1,23.2,14.7,32.2C-2.7,41.2,-18.3,55.7,-29.4,53.3C-40.5,50.9,-47.3,31.6,-49.1,14C-51,-3.7,-47.9,-19.7,-38.9,-25.9C-29.9,-32,-15,-28.3,4.8,-32.1C24.6,-36,49.1,-47.4,60.9,-40.6Z"
-          transform="translate(100 100)"
-        />
-      </svg>
 
       <div>
         <h3 className="text-center">Projects</h3>
