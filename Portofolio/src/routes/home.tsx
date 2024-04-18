@@ -1,3 +1,5 @@
+import Arrow from "@/components/arrow";
+
 function Home() {
   return (
     <div className="px-5 relative">
@@ -22,6 +24,8 @@ function Home() {
           <li>Project 3</li>
         </ul>
       </div>
+
+      <Arrow />
     </div>
   );
 }
