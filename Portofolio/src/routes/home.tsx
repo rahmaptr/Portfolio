@@ -1,12 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import Arrow from "@/components/arrow";
 import Profile from "@/assets/profile.jpg";
+import { useContext } from "react";
+import { ArrowContext } from "@/contexts/arrow-context";
 
 function Home() {
   const navigate = useNavigate()
+  const { showUpArrow } = useContext(ArrowContext)
 
   const handleClick = () => {
-    navigate('/projects')
+    if (!showUpArrow) navigate('/projects')
   }
 
   return (
@@ -29,7 +32,7 @@ function Home() {
               dx="2"
               dy="2"
               stdDeviation="1"
-              flood-color="#b8568c"
+              floodColor="#b8568c"
             />
           </filter>
         </defs>

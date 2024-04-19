@@ -19,7 +19,7 @@ function Arrow() {
         } else if (location.pathname === "/") {
           setShowUpArrow(false);
         }
-      } else {
+      } else if (window.scrollY === 0) {
         if (location.pathname === "/projects" && showUpArrow) {
           setShowUpArrow(false);
           navigate("/");
