@@ -4,12 +4,14 @@ import { Outlet } from "react-router-dom";
 
 function Root() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Outlet />
+      <div className="flex-grow overflow-auto">
+        <Outlet />
+      </div>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default Root;
