@@ -9,11 +9,11 @@ function Home() {
   const { showUpArrow } = useContext(ArrowContext)
 
   const handleClick = () => {
-    if (!showUpArrow) navigate('/projects')
+    if (!showUpArrow) navigate('/skills')
   }
 
   return (
-    <div className="px-6 relative" id="home">
+    <div className="px-6 relative overflow-x-hidden" id="home">
       <svg
         className="absolute w-full h-full -z-10 flex -right-[25em] transform scale-120"
         viewBox="0 0 200 200"

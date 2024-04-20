@@ -6,6 +6,7 @@ import Home from "./routes/home";
 import Projects from "./routes/projects";
 import { useState } from "react";
 import { ArrowContext } from "./contexts/arrow-context";
+import Skills from "./routes/skills";
 
 const BrowserRouter = createBrowserRouter([
   {
@@ -13,8 +14,8 @@ const BrowserRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/skills", element: <Skills /> },
       { path: "/projects", element: <Projects /> },
-      { path: "/skills"}
     ],
   },
 ]);
