@@ -22,7 +22,7 @@ function Projects() {
 
   return (
     <Element name="projects" className="pt-20 flex flex-col">
-      <h3 className="text-center hover:underline">Projects</h3>
+      <h3 className="text-center hover:underline pb-4">Projects</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 mx-auto">
         <Card className="p-4">
           <CardTitle className="text-center">Project 1</CardTitle>

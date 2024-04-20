@@ -13,9 +13,9 @@ function Home() {
   }
 
   return (
-    <div className="px-5 relative" id="home">
+    <div className="px-6 relative" id="home">
       <svg
-        className="absolute w-full h-full -z-10 flex -right-[22em] transform scale-120"
+        className="absolute w-full h-full -z-10 flex -right-[25em] transform scale-120"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
