@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Arrow from "@/components/arrow";
 import Profile from "@/assets/profile.jpg";
@@ -85,4 +86,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default React.memo(Home);

@@ -12,9 +12,7 @@ function Arrow() {
   useEffect(() => {
     const checkScroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        if (location.pathname === "/" && !showUpArrow) {
-          navigate("/projects");
-        } else if (location.pathname === "/projects") {
+        if (location.pathname === "/projects") {
           setShowUpArrow(true);
         } else if (location.pathname === "/") {
           setShowUpArrow(false);

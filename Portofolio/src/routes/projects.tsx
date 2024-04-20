@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, memo } from "react";
 import { Element } from "react-scroll";
 import { Card, CardTitle } from "@/components/ui/card";
 import Arrow from "@/components/arrow";
@@ -66,4 +66,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default memo(Projects);
