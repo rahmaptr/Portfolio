@@ -1,13 +1,16 @@
 import Arrow from "@/components/arrow";
 import { Card, CardTitle } from "@/components/ui/card";
+import { ArrowContext } from "@/contexts/arrow-context";
+import { useContext } from "react";
 import { SiApollographql, SiCss3, SiExpress, SiFirebase, SiGithub, SiGooglecloud, SiGraphql, SiHtml5, SiJavascript, SiJest, SiMongodb, SiNextdotjs, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript, SiVercel, SiVite } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 import { Element } from "react-scroll";
 
 function Skills() {
   const navigate = useNavigate();
+  const { showUpArrow } = useContext(ArrowContext);
   const handleClick = () => {
-    navigate("/projects");
+    if (!showUpArrow) navigate("/projects");
   };
   
   const skills = [
@@ -30,6 +33,9 @@ function Skills() {
     { icon: <SiVercel size={"2em"}/>, name: "Vercel" },
     { icon: <SiGithub size={"2em"}/>, name: "GitHub" },
   ];
+
+  skills.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <Element name="skills" className="pt-20 flex flex-col">
       <h3 className="text-center hover:underline pb-4">Skills</h3>
