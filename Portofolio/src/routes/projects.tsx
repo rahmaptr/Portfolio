@@ -13,10 +13,11 @@ function Projects() {
     });
   }, []);
 
-  const { showUpArrow } = useContext(ArrowContext);
+  const { showUpArrow, setShowUpArrow } = useContext(ArrowContext);
   const navigate = useNavigate();
   const handleClick = () => {
     if (showUpArrow) navigate("/");
+    setShowUpArrow(false);
   };
 
   return (
