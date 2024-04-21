@@ -2,7 +2,7 @@ import { useContext, useEffect, memo } from "react";
 import { Element } from "react-scroll";
 import { Card, CardTitle } from "@/components/ui/card";
 import Arrow from "@/components/arrow";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowContext } from "@/contexts/arrow-context";
 
 function Projects() {
@@ -20,44 +20,45 @@ function Projects() {
     setShowUpArrow(false);
   };
 
+  const projects = [
+    {
+      title: "TripTracks",
+      img: "TripTracks.png",
+      description:
+        "React application for trip planner with weather checker and Google directions",
+      link: "https://triptracks.web.app/",
+    },
+    {
+      title: "File Share",
+      img: "shareFile.png",
+      description: "Peer-to-peer file share with socket.io",
+      link: "https://github.com/file-sharing-app/group-project",
+    },
+    {
+      title: "This porto",
+      img: "",
+      description: "Made with React, Tailwind CSS, and Vite",
+      link: "https://www.arpiza.site",
+    },
+  ];
+
   return (
     <Element name="projects" className="pt-20 flex flex-col">
       <h3 className="text-center hover:underline pb-4">Projects</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 mx-auto">
-        <Card className="p-4">
-          <CardTitle className="text-center">Project 1</CardTitle>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-            doloribus alias blanditiis commodi minima dolore ad recusandae.
-            Praesentium accusamus totam fugiat nihil hic, nulla adipisci
-            doloribus inventore. Tempore et optio error, corrupti quam nemo
-            voluptas vero! Ipsa quisquam delectus perferendis est corrupti, at
-            nisi id eaque, vitae sed, eligendi pariatur voluptatibus sapiente
-            placeat. Vel, rerum? Quisquam, mollitia in quibusdam, doloribus iure
-            necessitatibus voluptas ex eligendi blanditiis est dolorem
-            asperiores vel. Blanditiis enim dicta molestias quis nisi expedita
-            quam consequuntur nesciunt sunt consequatur, cupiditate quo aut
-            delectus repellendus eos tempora natus libero molestiae officiis
-            earum ipsa voluptas! Hic accusamus maxime id.
-          </p>
-        </Card>
-        <Card className="p-4">
-          <CardTitle className="text-center">Project 2</CardTitle>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-            doloribus alias blanditiis commodi minima dolore ad recusandae.
-            Praesentium accusamus totam fugiat nihil hic, nulla adipisci
-            doloribus inventore. Tempore et optio error, corrupti quam nemo
-            voluptas vero! Ipsa quisquam delectus perferendis est corrupti, at
-            nisi id eaque, vitae sed, eligendi pariatur voluptatibus sapiente
-            placeat. Vel, rerum? Quisquam, mollitia in quibusdam, doloribus iure
-            necessitatibus voluptas ex eligendi blanditiis est dolorem
-            asperiores vel. Blanditiis enim dicta molestias quis nisi expedita
-            quam consequuntur nesciunt sunt consequatur, cupiditate quo aut
-            delectus repellendus eos tempora natus libero molestiae officiis
-            earum ipsa voluptas! Hic accusamus maxime id.
-          </p>
-        </Card>
+        {projects.map((project, i) => (
+          <Card key={i} className="p-4">
+            <CardTitle className="text-center pb-3 hover:underline"><Link to={project.link}>{project.title}</Link></CardTitle>
+            {/* {project.img && (
+              <img
+                src={`@/assets/${project.img}`}
+                alt={project.title}
+                className="w-full h-52 object-cover"
+              />
+            )} */}
+            <p className="text-justify">{project.description}</p>
+          </Card>
+        ))}
       </div>
       <div onClick={handleClick}>
         <Arrow />
