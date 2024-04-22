@@ -15,7 +15,7 @@ function ErrorPage() {
         <h1>Something went wrong</h1>
         {error.status === 404 ? (
           <h4>The page you're looking for doesn't exist</h4>
-        ) : null}
+        ) : error.statusText}
         <Button className="mt-3 w-1/5" onClick={() => navigate("/")}>
           Back to Home
         </Button>
