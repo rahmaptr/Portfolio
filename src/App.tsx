@@ -11,7 +11,7 @@ import Skills from "./routes/skills";
 const BrowserRouter = createBrowserRouter([
   {
     element: <Root />,
-    errorElement: <ErrorPage />,
+    // errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/skills", element: <Skills /> },
