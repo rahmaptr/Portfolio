@@ -1,4 +1,7 @@
-import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
@@ -25,9 +28,7 @@ function App() {
   return (
     <ArrowContext.Provider value={{ showUpArrow, setShowUpArrow }}>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <BrowserRouter basename="/Portfolio">
         <RouterProvider router={router} />
-        </BrowserRouter>
       </ThemeProvider>
     </ArrowContext.Provider>
   );
