@@ -40,6 +40,12 @@ function Projects() {
       description: "Made with React, Tailwind CSS, and Vite",
       link: "https://www.arpiza.site",
     },
+    {
+      title: "GOVOKASI Website (In Progress)",
+      img: "",
+      description: "GOVOKASI Website for PBI Project",
+      link: ""
+    }
   ];
 
   return (
