@@ -39,10 +39,10 @@ function Projects() {
       link: "https://github.com/file-sharing-app/group-project",
     },
     {
-      title: "This portfolio site",
+      title: "This porto",
       img: "",
       description: "Made with React, Tailwind CSS, and Vite",
-      link: "https://github.com/rahmaptr/Portfolio",
+      link: "https://www.arpiza.site",
     },
     {
       title: "GOVOKASI Website (In Progress)",
