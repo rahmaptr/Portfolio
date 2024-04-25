@@ -2,7 +2,7 @@ import { useContext, useEffect, memo } from "react";
 import { Element } from "react-scroll";
 import { Card, CardTitle } from "@/components/ui/card";
 import Arrow from "@/components/arrow";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import { ArrowContext } from "@/contexts/arrow-context";
 
 function Projects() {
@@ -16,8 +16,12 @@ function Projects() {
   const { showUpArrow, setShowUpArrow } = useContext(ArrowContext);
   const navigate = useNavigate();
   const handleClick = () => {
-    if (showUpArrow) navigate("/");
-    setShowUpArrow(false);
+    if (showUpArrow) {
+      navigate("/")
+      setShowUpArrow(false);
+    } else {
+      redirect("/")
+    };
   };
 
   const projects = [
