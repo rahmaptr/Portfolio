@@ -59,13 +59,13 @@ function Projects() {
         {projects.map((project, i) => (
           <Card key={i} className="p-4">
             <CardTitle className="text-center pb-3 hover:underline"><Link to={project.link}>{project.title}</Link></CardTitle>
-            {project.img && (
+            {/* {project.img && (
               <img
                 src={`../assets/${project.img}`}
                 alt={project.title}
                 className="w-full h-52 object-cover"
               />
-            )}
+            )} */}
             <p className="text-justify">{project.description}</p>
           </Card>
         ))}
