@@ -2,7 +2,7 @@ import { useContext, useEffect, memo } from "react";
 import { Element } from "react-scroll";
 import { Card, CardTitle } from "@/components/ui/card";
 import Arrow from "@/components/arrow";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowContext } from "@/contexts/arrow-context";
 
 function Projects() {
@@ -17,11 +17,11 @@ function Projects() {
   const navigate = useNavigate();
   const handleClick = () => {
     if (showUpArrow) {
-      navigate("/")
+      navigate("/");
       setShowUpArrow(false);
     } else {
-      redirect("/")
-    };
+      navigate("/");
+    }
   };
 
   const projects = [
@@ -48,8 +48,8 @@ function Projects() {
       title: "GOVOKASI Website (In Progress)",
       img: "",
       description: "GOVOKASI Website for PBI Project",
-      link: ""
-    }
+      link: "",
+    },
   ];
 
   return (
@@ -58,7 +58,9 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 mx-auto">
         {projects.map((project, i) => (
           <Card key={i} className="p-4">
-            <CardTitle className="text-center pb-3 hover:underline"><Link to={project.link}>{project.title}</Link></CardTitle>
+            <CardTitle className="text-center pb-3 hover:underline">
+              <Link to={project.link}>{project.title}</Link>
+            </CardTitle>
             {/* {project.img && (
               <img
                 src={`../assets/${project.img}`}
