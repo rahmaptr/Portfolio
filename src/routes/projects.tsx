@@ -4,6 +4,10 @@ import { Card, CardTitle } from "@/components/ui/card";
 import Arrow from "@/components/arrow";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowContext } from "@/contexts/arrow-context";
+import TripTracks from "../assets/TripTracks.png";
+import shareFile from "../assets/shareFile.png";
+import portfolio from "../assets/portfolio.png";
+import webGovokasi from "../assets/webGovokasi.png";
 
 function Projects() {
   useEffect(() => {
@@ -27,28 +31,28 @@ function Projects() {
   const projects = [
     {
       title: "TripTracks",
-      img: "TripTracks.png",
+      img: TripTracks,
       description:
         "React application for trip planner with weather checker and Google directions",
       link: "https://triptracks.web.app/",
     },
     {
       title: "File Share",
-      img: "shareFile.png",
+      img: shareFile,
       description: "Peer-to-peer file share with socket.io",
       link: "https://github.com/file-sharing-app/group-project",
     },
     {
-      title: "This porto",
-      img: "",
+      title: "This portfolio",
+      img: portfolio,
       description: "Made with React, Tailwind CSS, and Vite",
       link: "https://www.arpiza.site",
     },
     {
       title: "GOVOKASI Website (In Progress)",
-      img: "",
+      img: webGovokasi,
       description: "GOVOKASI Website for PBI Project",
-      link: "",
+      link: "https://wd-g2-web.web.app/",
     },
   ];
 
@@ -58,16 +62,16 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 mx-auto">
         {projects.map((project, i) => (
           <Card key={i} className="p-4">
-            <CardTitle className="text-center pb-3 hover:underline">
+            <CardTitle className="text-center pb-4 hover:underline">
               <Link to={project.link}>{project.title}</Link>
             </CardTitle>
-            {/* {project.img && (
+            {project.img && (
               <img
-                src={`../assets/${project.img}`}
+                src={project.img}
                 alt={project.title}
-                className="w-full h-52 object-cover"
+                className="w-full h-52 object-contain mb-3 border rounded-md"
               />
-            )} */}
+            )}
             <p className="text-justify">{project.description}</p>
           </Card>
         ))}
