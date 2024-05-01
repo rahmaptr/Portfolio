@@ -39,7 +39,7 @@ function Skills() {
   return (
     <Element name="skills" className="pt-20 flex flex-col">
       <h3 className="text-center hover:underline pb-4">Skills</h3>
-      <div className="grid grid-cols-3 gap-4 w-[45%] mx-auto">
+      <div className="grid grid-cols-3 gap-4 w-[45%] mx-auto mb-4">
       {skills.map((skill, i) => (
         <Card key={i} className="p-4 flex h-auto flex-col justify-center items-center hover:ring-2 hover:ring-[#b8568c]">
           {skill.icon}
