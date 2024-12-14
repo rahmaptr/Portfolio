@@ -8,6 +8,7 @@ import TripTracks from "../assets/TripTracks.png";
 import shareFile from "../assets/shareFile.png";
 import portfolio from "../assets/portfolio.png";
 import webGovokasi from "../assets/webGovokasi.png";
+import laundryFlow from "../assets/laundryFlow.png";
 
 function Projects() {
   useEffect(() => {
@@ -54,6 +55,12 @@ function Projects() {
       description: "GOVOKASI Website for PBI Project",
       link: "https://wd-g2-web.web.app/",
     },
+    {
+      title: 'LaundryFlow',
+      img: laundryFlow,
+      description: 'LaundryFlow is a laundry management system',
+      link: '',
+    }
   ];
 
   return (
